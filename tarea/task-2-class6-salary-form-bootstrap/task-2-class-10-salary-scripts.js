@@ -53,10 +53,10 @@ $buttonCalculateSalary.onclick = () => {
 }
 
 function createTitle(type, className, message){
-    const title = document.createElement(type);
-    title.classList.add = className;
-    title.innerText = message;
-    return title;
+    const $title = document.createElement(type);
+    $title.classList.add = className;
+    $title.innerText = message;
+    return $title;
 }
 
 function createInputStructure(){
