@@ -6,12 +6,12 @@ const $familyAgeForm = document.querySelector('#family-age-form');
 const $buttonCalculateValues = document.querySelector('#calculate-age-values-button');
 
 $buttonFamilyMembers.onclick = () => {
-	const $familyMembers = document.querySelector('#members-in-family').value;
+	const familyMembers = document.querySelector('#members-in-family').value;
 
 	const $title = createTitle('h4', 'Enter the ages of family members');
 	$ageFormContent.insertBefore($title, $familyAgeForm);
 
-	const $formInputsContent = addFamilyInputs($familyMembers);
+	const $formInputsContent = addFamilyInputs(familyMembers);
 	$familyAgeForm.insertBefore($formInputsContent, $buttonCalculateValues);
 
 	$ageFormContent.style.display = "block";
