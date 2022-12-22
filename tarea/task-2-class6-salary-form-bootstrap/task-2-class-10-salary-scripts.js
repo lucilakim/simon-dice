@@ -9,20 +9,13 @@ const $resultContent = document.querySelector("#result-values-salary");
 const $salaryFormTitle = createTitle("h4", "salary-form-title", "Enter the annual salary of each family member, only one salary per input");
 $salaryFormContent.insertBefore($salaryFormTitle, $salaryForm);
 
-
 $buttonAdd.onclick = () => {
     $salaryFormContent.style.display = "block";
     $salaryFormTitle.style.display = "block";
 
-    const $row = createRow();
-    const $col = createCol(2);
-    const $salaryLabel = createLabel("Annual Salary: ", "salary-label");
-    const $salaryInput = createInput("salary-input");
-    $row.appendChild($col);
-    $col.appendChild($salaryLabel);
-    $col.appendChild($salaryInput);
+    const $salaryInputsStructure = createInputStructure();
 
-    $salaryForm.insertBefore($row, $buttonCalculateSalary);
+    $salaryForm.insertBefore($salaryInputsStructure, $buttonCalculateSalary);
     return false;
 }
 
@@ -64,6 +57,17 @@ function createTitle(type, className, message){
     title.classList.add = className;
     title.innerText = message;
     return title;
+}
+
+function createInputStructure(){
+    const $row = createRow();
+    const $col = createCol(2);
+    const $salaryLabel = createLabel("Annual Salary: ", "salary-label");
+    const $salaryInput = createInput("salary-input");
+    $row.appendChild($col);
+    $col.appendChild($salaryLabel);
+    $col.appendChild($salaryInput);
+    return $row;
 }
 
 function createRow(){
