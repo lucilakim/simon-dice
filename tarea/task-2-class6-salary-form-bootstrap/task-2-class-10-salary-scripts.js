@@ -18,9 +18,11 @@ $buttonAdd.onclick = () => {
     const $col = createCol(2);
     const $salaryLabel = createLabel("Annual Salary: ", "salary-label");
     const $salaryInput = createInput("salary-input");
+    $row.appendChild($col);
+    $col.appendChild($salaryLabel);
+    $col.appendChild($salaryInput);
 
-    $salaryForm.insertBefore($salaryLabel, $buttonCalculateSalary);
-    $salaryForm.insertBefore($salaryInput, $buttonCalculateSalary);
+    $salaryForm.insertBefore($row, $buttonCalculateSalary);
     return false;
 }
 
