@@ -6,10 +6,9 @@ const $salaryForm = document.querySelector('#salary-form');
 const $buttonCalculateSalary = document.querySelector('#calculate-salary-button');
 const $resultContent = document.querySelector('#result-values-salary');
 
-const $salaryFormTitle = document.createElement('h3');
-$salaryFormTitle.classList.add = "salary-form-title"
-$salaryFormTitle.innerText = "Enter the annual salary of each family member, only one salary per input";
+const $salaryFormTitle = createTitle('h4', "salary-form-title", "Enter the annual salary of each family member, only one salary per input");
 $salaryFormContent.insertBefore($salaryFormTitle, $salaryForm);
+
 
 $buttonAdd.onclick = () => {
     $salaryFormContent.style.display = "block";
@@ -54,6 +53,13 @@ $buttonCalculateSalary.onclick = () => {
     $averageSalaryText.innerText = `The average annual salary is: ${averageSalary}`;
     $averageMonthlySalaryText.innerText = `The average monthly salary is: ${averageMonthlySalary}`;
     return false;
+}
+
+function createTitle(type, className, message){
+    const title = document.createElement(type);
+    title.classList.add = className;
+    title.innerText = message;
+    return title;
 }
 
 function createLabel(message, id) {
