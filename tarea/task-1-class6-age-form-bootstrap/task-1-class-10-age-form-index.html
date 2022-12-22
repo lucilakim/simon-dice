@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./task-1-class-10-age-form-styles.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm">
+                <h1>Value calculator based on family ages</h1>
+            </div>
+        </div>
+
+        <div class="row mb-5 mt-4">
+            <div class="col-sm">
+                <form class="row">
+                    <div class="col-sm-auto">
+                        <label for="members-in-family" class="form-label">Number of family members: </label>
+                    </div>
+                    <div class="col-sm-auto">
+                        <input type="number" class="form-control" id="members-in-family">
+                    </div>
+                    <div class="col-sm-auto">
+                        <button id="button-family-members" class="btn btn-primary">Enter</button>
+                        <button id="reset-button" class="btn btn-warning">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm age-form-content" id="age-form-content">
+                <form id="family-age-form">
+                    <button id="calculate-age-values-button" class="btn btn-secondary mt-3">Calculate</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-sm" id="results">
+                <p id="oldest-age"></p>
+                <p id="youngest-age"></p>
+                <p id="average-age"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./task-1-class-10-age-form-scripts.js"></script>
+</body>
+
+</html>
