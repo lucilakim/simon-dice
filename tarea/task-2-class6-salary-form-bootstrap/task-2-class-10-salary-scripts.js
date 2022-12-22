@@ -14,16 +14,13 @@ $buttonAdd.onclick = () => {
     $salaryFormContent.style.display = "block";
     $salaryFormTitle.style.display = "block";
 
+    const $row = createRow();
     const $salaryLabel = createLabel("Annual Salary: ", "salary-label");
     const $salaryInput = createInput("salary-input");
 
     $salaryForm.insertBefore($salaryLabel, $buttonCalculateSalary);
     $salaryForm.insertBefore($salaryInput, $buttonCalculateSalary);
     return false;
-}
-
-function createRow(){
-    const $row = document.createElement("div")
 }
 
 $buttonRemove.onclick = () => {
@@ -64,6 +61,12 @@ function createTitle(type, className, message){
     title.classList.add = className;
     title.innerText = message;
     return title;
+}
+
+function createRow(){
+    const $row = document.createElement("div");
+    $row.classList("row");
+    return $row;
 }
 
 function createLabel(message, id) {
