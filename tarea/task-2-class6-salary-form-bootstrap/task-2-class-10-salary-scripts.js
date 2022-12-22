@@ -1,12 +1,12 @@
-const $body = document.querySelector('body');
-const $buttonAdd = document.querySelector('#add-input-button');
-const $buttonRemove = document.querySelector('#remove-input-button');
-const $salaryFormContent = document.querySelector('#salary-form-content');
-const $salaryForm = document.querySelector('#salary-form');
-const $buttonCalculateSalary = document.querySelector('#calculate-salary-button');
-const $resultContent = document.querySelector('#result-values-salary');
+const $body = document.querySelector("body");
+const $buttonAdd = document.querySelector("#add-input-button");
+const $buttonRemove = document.querySelector("#remove-input-button");
+const $salaryFormContent = document.querySelector("#salary-form-content");
+const $salaryForm = document.querySelector("#salary-form");
+const $buttonCalculateSalary = document.querySelector("#calculate-salary-button");
+const $resultContent = document.querySelector("#result-values-salary");
 
-const $salaryFormTitle = createTitle('h4', "salary-form-title", "Enter the annual salary of each family member, only one salary per input");
+const $salaryFormTitle = createTitle("h4", "salary-form-title", "Enter the annual salary of each family member, only one salary per input");
 $salaryFormContent.insertBefore($salaryFormTitle, $salaryForm);
 
 
@@ -22,9 +22,13 @@ $buttonAdd.onclick = () => {
     return false;
 }
 
+function createRow(){
+    const $row = document.createElement("div")
+}
+
 $buttonRemove.onclick = () => {
-    const $labels = document.querySelectorAll('.salary-label');
-    const $inputs = document.querySelectorAll('.salary-input');
+    const $labels = document.querySelectorAll(".salary-label");
+    const $inputs = document.querySelectorAll(".salary-input");
 
     $labels[$labels.length - 1].remove();
     $inputs[$inputs.length - 1].remove();
@@ -35,7 +39,7 @@ $buttonRemove.onclick = () => {
 }
 
 $buttonCalculateSalary.onclick = () => {
-    const salariesFromHtml = document.querySelectorAll('.salary-input');
+    const salariesFromHtml = document.querySelectorAll(".salary-input");
     const salaries = getNumbers(salariesFromHtml);
 
     const higherSalary = getHigher(salaries);
@@ -44,10 +48,10 @@ $buttonCalculateSalary.onclick = () => {
     const averageMonthlySalary = getMonthlySalary(averageSalary);
 
     $resultContent.style.display = "block";
-    const $higherSalaryText = document.querySelector('#higher-salary');
-    const $smallerSalaryText = document.querySelector('#smaller-salary');
-    const $averageSalaryText = document.querySelector('#average-salary');
-    const $averageMonthlySalaryText = document.querySelector('#average-monthly-salary');
+    const $higherSalaryText = document.querySelector("#higher-salary");
+    const $smallerSalaryText = document.querySelector("#smaller-salary");
+    const $averageSalaryText = document.querySelector("#average-salary");
+    const $averageMonthlySalaryText = document.querySelector("#average-monthly-salary");
     $higherSalaryText.innerText = `The higher salary is: ${higherSalary}`;
     $smallerSalaryText.innerText = `The smaller salary is: ${smallerSalary}`;
     $averageSalaryText.innerText = `The average annual salary is: ${averageSalary}`;
@@ -63,7 +67,7 @@ function createTitle(type, className, message){
 }
 
 function createLabel(message, id) {
-    const $label = document.createElement('label');
+    const $label = document.createElement("label");
     $label.htmlFor = id;
     $label.id = id;
     $label.classList.add(id);
@@ -72,7 +76,7 @@ function createLabel(message, id) {
 }
 
 function createInput(id) {
-    const $input = document.createElement('input');
+    const $input = document.createElement("input");
     $input.type = "number";
     $input.id = id;
     $input.classList.add(id);
