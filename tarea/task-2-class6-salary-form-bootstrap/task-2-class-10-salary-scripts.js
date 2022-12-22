@@ -14,7 +14,6 @@ $buttonAdd.onclick = () => {
     $salaryFormTitle.style.display = "block";
 
     const $salaryInputsStructure = createInputStructure();
-
     $salaryForm.insertBefore($salaryInputsStructure, $buttonCalculateSalary);
     return false;
 }
@@ -86,6 +85,7 @@ function createLabel(message, id) {
     const $label = document.createElement("label");
     $label.htmlFor = id;
     $label.id = id;
+    $label.classList.add("form-label");
     $label.classList.add(id);
     $label.innerText = message;
     return $label;
@@ -95,6 +95,7 @@ function createInput(id) {
     const $input = document.createElement("input");
     $input.type = "number";
     $input.id = id;
+    $input.classList.add("form-control");
     $input.classList.add(id);
     return $input;
 }
