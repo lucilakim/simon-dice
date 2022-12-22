@@ -15,6 +15,7 @@ $buttonAdd.onclick = () => {
     $salaryFormTitle.style.display = "block";
 
     const $row = createRow();
+    const $col = createCol(2);
     const $salaryLabel = createLabel("Annual Salary: ", "salary-label");
     const $salaryInput = createInput("salary-input");
 
@@ -65,8 +66,14 @@ function createTitle(type, className, message){
 
 function createRow(){
     const $row = document.createElement("div");
-    $row.classList("row");
+    $row.classList.add("row");
     return $row;
+}
+
+function createCol(size){
+    const $col = document.createElement("div");
+    $col.classList.add(`col-${size}`);
+    return $col;
 }
 
 function createLabel(message, id) {
