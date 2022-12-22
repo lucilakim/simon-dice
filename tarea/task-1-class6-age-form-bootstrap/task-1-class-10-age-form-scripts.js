@@ -46,10 +46,10 @@ function createTitle(type, message){
 	return $title;
 }
 
-function addFamilyInputs(quantity) {
+function addFamilyInputs(members) {
 	const fragment = new DocumentFragment();
 
-	for (let i = 0; i < quantity; i++) {
+	for (let i = 0; i < members; i++) {
 		const $familyMember = createFamilyRow(i);
 		fragment.appendChild($familyMember);
 	}
