@@ -1,0 +1,12 @@
+.row {
+    width: 750px;
+}
+
+.color-box {
+    height: 150px;
+    opacity: 0.5;
+}
+
+.full-color {
+    opacity: 1;
+}
