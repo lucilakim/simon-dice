@@ -2,9 +2,15 @@
     width: 750px;
 }
 
-.color-box {
+.info-box {
+    width: 500px;
+    margin-top: 30px;
+}
+
+.color-box, .info-box {
     height: 150px;
     opacity: 0.5;
+    color: white;
 }
 
 .full-color {

@@ -12,27 +12,31 @@
 </head>
 
 <body>
-    <div class="container px-4 d-flex justify-content-center mt-5">
-        <div class="row">
+    <div class="container px-4 d-flex  mt-5">
+        <div class="row g-3">
             <div class="col">
                 <h1>Simon Says</h1>
-                <button class="btn btn-primary btn-lg">Play</button>
-                <button class="btn btn-secondary btn-lg">Stop</button>
+                <button class="btn btn-primary btn-lg" id="play-button">Play</button>
+                <button class="btn btn-secondary btn-lg" id="stop-button">Stop</button>
+
+                <div class="bg-info info-box text-center">
+                    <p class="fs-5">Start to play</p>
+                </div>
             </div>
         </div>
 
         <div class="row g-3 bg-dark p-3">
             <div class="col-6">
-                <div class="p-3 bg-success color-box" id="green-box"></div>
+                <div class="p-3 bg-success color-box text-center" id="green-box">Green</div>
             </div>
             <div class="col-6">
-                <div class="p-3 bg-danger color-box" id="red-box"></div>
+                <div class="p-3 bg-danger color-box text-center" id="red-box">Red</div>
             </div>
             <div class="col-6">
-                <div class="p-3 bg-warning color-box" id="yellow-box"></div>
+                <div class="p-3 bg-warning color-box text-center" id="yellow-box">Yellow</div>
             </div>
             <div class="col-6">
-                <div class="p-3 bg-primary color-box" id="blue-box"></div>
+                <div class="p-3 bg-primary color-box text-center" id="blue-box">BLue</div>
             </div>
         </div>
     </div>
