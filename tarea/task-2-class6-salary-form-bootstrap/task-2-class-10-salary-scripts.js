@@ -1,5 +1,5 @@
 const $body = document.querySelector("body");
-const $buttonAdd = document.querySelector("#add-input-button");
+const $addButton = document.querySelector("#add-input-button");
 const $buttonRemove = document.querySelector("#remove-input-button");
 const $salaryFormContent = document.querySelector("#salary-form-content");
 const $salaryForm = document.querySelector("#salary-form");
@@ -9,7 +9,7 @@ const $resultContent = document.querySelector("#result-values-salary");
 const $salaryFormTitle = createTitle("h4", "salary-form-title", "Enter the annual salary of each family member, only one salary per input");
 $salaryFormContent.insertBefore($salaryFormTitle, $salaryForm);
 
-$buttonAdd.onclick = () => {
+$addButton.onclick = () => {
     $salaryFormContent.style.display = "block";
     $salaryFormTitle.style.display = "block";
 
